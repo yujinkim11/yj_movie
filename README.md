@@ -3,9 +3,9 @@
 # Todo
 
 - [x] Package Install
-- [ ] Router Setup
-- [ ] Create Components
-- [ ] Helmet
+- [x] Router Setup
+- [x] Create Components
+- [x] Helmet
 - [ ] Get API
 - [ ] Use Effect
 - [ ] Try Catch
