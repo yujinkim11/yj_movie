@@ -2,7 +2,7 @@
 
 # Todo
 
-- [ ] Package Install
+- [x] Package Install
 - [ ] Router Setup
 - [ ] Create Components
 - [ ] Helmet
@@ -13,4 +13,3 @@
 - [ ] Slide
 - [ ] Detail Page
 - [ ] Video
-- [ ]
