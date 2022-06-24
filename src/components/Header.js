@@ -27,9 +27,6 @@ const MenuWrap = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    color: ${mainStyle.color};
-  }
 `;
 
 const Menu = styled.li`
@@ -42,7 +39,7 @@ export const Header = () => {
   return (
     <SHeader>
       <Logo>
-        <Link to={"/"}>YJMOVIE</Link>
+        <Link to={"/"}>YJ_MOVIE</Link>
       </Logo>
 
       <MenuWrap>

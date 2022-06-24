@@ -22,6 +22,6 @@ export const GlobalStyled = createGlobalStyle`
 
     a{
         text-decoration: none;
-        color: ${mainStyle.bgColor}
+        color: ${mainStyle.color}
     }
 `;
