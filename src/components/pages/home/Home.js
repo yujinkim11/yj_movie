@@ -3,6 +3,7 @@ import { movieApi } from "../../../api";
 import { useState } from "react";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/globalStyle";
+import { Loading } from "../../Loading";
 // console.log(movieApi.nowPlaying());
 
 const MainBanner = styled.section`
@@ -56,7 +57,7 @@ export const Home = () => {
         } = await movieApi.upComming();
         setUpComming(upCommingData);
 
-        setLoading(false);
+        // setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -71,7 +72,7 @@ export const Home = () => {
   return (
     <div>
       {loading ? (
-        "Loading..."
+        <Loading />
       ) : (
         <>
           {playing && (
