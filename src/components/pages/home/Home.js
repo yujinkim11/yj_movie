@@ -20,7 +20,7 @@ export const Home = () => {
         } = await movieApi.nowPlaying();
         setPlaying(playingData);
         // => 비구조화 할당 이용시 변수명 변경할 땐
-        // 변수명: 변경할명
+        // 변수명: 변경할명(임의로 지정 가능)
 
         const {
           data: { results: ratedData },
