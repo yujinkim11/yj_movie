@@ -13,6 +13,7 @@ const Banner = styled.section`
 `;
 
 const BlackBox = styled.div`
+  width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
   background: linear-gradient(
