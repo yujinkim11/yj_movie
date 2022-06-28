@@ -4,7 +4,10 @@ import { useState } from "react";
 import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
 import { movieNum } from "../../../constants/constant";
+import { Movies } from "./Movies";
 // console.log(movieApi.nowPlaying());
+import "swiper/css";
+import { Container } from "../../Container";
 
 export const Home = () => {
   const [playing, setPlaying] = useState();
@@ -40,7 +43,7 @@ export const Home = () => {
     movieData();
   }, []);
 
-  // console.log("현재상영 영화:", playing);
+  console.log("현재상영 영화:", playing);
   // console.log("인기 영화:", rated);
   // console.log("개봉예정 영화:", upComming);
 
@@ -49,7 +52,18 @@ export const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
+        <>
+          {playing && (
+            <>
+              <MainBanner playData={playing[movieNum]} />
+              <Container>
+                <Movies movieData={playing} title="현재 상영 영화" />
+                <Movies movieData={rated} title="인기 영화" />
+                <Movies movieData={upComming} title="개봉 예정 영화" />
+              </Container>
+            </>
+          )}
+        </>
       )}
     </div>
   );

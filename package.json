@@ -20,6 +20,7 @@
     "styled": "^1.0.0",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.4.1",
+    "swiper": "^8.2.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

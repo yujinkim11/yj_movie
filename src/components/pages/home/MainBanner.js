@@ -12,6 +12,16 @@ const Banner = styled.section`
   }
 `;
 
+const BlackBox = styled.div`
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(162, 162, 162, 0.7651435574229692) 100%
+  );
+`;
+
 const Title = styled.div`
   max-width: 650px;
   /* width: 100%; */
@@ -50,8 +60,10 @@ export const MainBanner = ({ playData }) => {
           background: `url(${imgUrl}/${playData.backdrop_path}) no-repeat center / cover`,
         }}
       >
-        <Title>{playData.title}</Title>
-        <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+        <BlackBox>
+          <Title>{playData.title}</Title>
+          <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+        </BlackBox>
       </Banner>
     </>
   );
