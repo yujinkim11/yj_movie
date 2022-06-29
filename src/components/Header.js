@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../styles/globalStyle";
+import { useState } from "react";
 
 const SHeader = styled.div`
   width: 100%;
@@ -14,6 +15,7 @@ const SHeader = styled.div`
   top: 0;
   left: 0;
   z-index: 9;
+  background-color: ${(props) => props.bgColor};
   @media screen and (max-width: 500px) {
     padding: ${mainStyle.moPadding};
   }
@@ -46,8 +48,22 @@ const Menu = styled.li`
 `;
 
 export const Header = () => {
+  const [bg, setBg] = useState("transparent");
+
+  const handelScroll = () => {
+    const sct = window.pageYOffset;
+    console.log(sct);
+    if (sct > 300) {
+      setBg("#1d1d1d");
+    } else {
+      setBg("transparent");
+    }
+  };
+
+  window.addEventListener("scroll", handelScroll);
+
   return (
-    <SHeader>
+    <SHeader bgColor={bg}>
       <Logo>
         <Link to={"/"}>YJ_MOVIE</Link>
       </Logo>
