@@ -13,24 +13,23 @@ const Banner = styled.section`
 `;
 
 const BlackBox = styled.div`
-  width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(162, 162, 162, 0.7651435574229692) 100%
+    rgba(59, 59, 59, 0.7651435574229692) 32%
   );
 `;
 
 const Title = styled.div`
   max-width: 650px;
-  /* width: 100%; */
+  width: 100%;
   line-height: 6rem;
   font-size: 80px;
   font-weight: 700;
   @media screen and (max-width: 500px) {
-    /* width: 100%; */
+    width: 100%;
     font-size: 45px;
     line-height: 6rem;
     position: absolute;
@@ -40,6 +39,7 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
+  padding: ${mainStyle.padding};
   max-width: 700px;
   width: 100%;
   line-height: 2rem;
