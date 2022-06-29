@@ -39,7 +39,6 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  padding: ${mainStyle.padding};
   max-width: 700px;
   width: 100%;
   line-height: 2rem;

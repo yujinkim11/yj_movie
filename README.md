@@ -20,7 +20,7 @@
 - [x] Loading
 - [x] Slide
 - [ ] Slide Link
-- [ ] Slide Navigation
+- [x] Slide Navigation
 - [ ] Header Event
 - [ ] 404 Image
 
