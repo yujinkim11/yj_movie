@@ -52,7 +52,7 @@ export const Header = () => {
 
   const handelScroll = () => {
     const sct = window.pageYOffset;
-    console.log(sct);
+    // console.log(sct);
     if (sct > 300) {
       setBg("#1d1d1d");
     } else {
