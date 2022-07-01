@@ -6,6 +6,7 @@ import { Container } from "../../Container";
 import { mainStyle } from "../../../styles/globalStyle";
 import { imgUrl } from "../../../constants/constant";
 import { Loading } from "../../Loading";
+import { ScrollTop } from "../../../ScrollTop";
 
 const DetailWrap = styled.div`
   padding: ${mainStyle.padding};
@@ -99,6 +100,7 @@ export const Detail = () => {
 
   return (
     <div>
+      <ScrollTop />
       {loading ? (
         <Loading />
       ) : (
