@@ -7,6 +7,7 @@ import { ScrollTop } from "../../../ScrollTop";
 import { MovieDetail } from "./MovieDetail";
 import styled from "styled-components";
 import { mainStyle } from "../../../styles/globalStyle";
+import { PageTitle } from "../../PageTitle";
 
 const Iframe = styled.iframe`
   width: 100%;
@@ -42,6 +43,7 @@ export const Detail = () => {
 
   return (
     <div>
+      <PageTitle title={"Detail"} />
       <ScrollTop />
       {loading ? (
         <Loading />
