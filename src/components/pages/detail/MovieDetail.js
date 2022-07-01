@@ -1,6 +1,7 @@
 import { mainStyle } from "../../../styles/globalStyle";
 import { imgUrl } from "../../../constants/constant";
 import styled from "styled-components";
+import { useState } from "react";
 
 const DetailWrap = styled.div`
   padding: ${mainStyle.padding};
@@ -74,6 +75,17 @@ const Desc = styled.p`
   margin-top: 80px;
 `;
 
+const Button = styled.div`
+  width: 180px;
+  height: 50px;
+  margin-top: 50px;
+  border: 1px solid white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const MovieDetail = ({ movieData }) => {
   return (
     <DetailWrap>
@@ -98,6 +110,7 @@ export const MovieDetail = ({ movieData }) => {
         <Time>{movieData.runtime} 분</Time>
 
         <Desc>{movieData.overview}</Desc>
+        <Button>예고편 보기</Button>
       </ConWrap>
     </DetailWrap>
   );

@@ -6,13 +6,17 @@ import { Loading } from "../../Loading";
 import { ScrollTop } from "../../../ScrollTop";
 import { MovieDetail } from "./MovieDetail";
 import styled from "styled-components";
-import { mainStyle } from "../../../styles/globalStyle";
+
 import { PageTitle } from "../../PageTitle";
 
 const Iframe = styled.iframe`
   width: 100%;
   height: 700px;
   margin-top: 150px;
+  @media screen and (max-width: 500px) {
+    height: 60vh;
+    margin-top: 100px;
+  }
 `;
 
 export const Detail = () => {
