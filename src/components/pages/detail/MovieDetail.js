@@ -87,6 +87,12 @@ const Button = styled.div`
 `;
 
 export const MovieDetail = ({ movieData }) => {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 1000,
+    });
+  };
+
   return (
     <DetailWrap>
       <DetailImg
@@ -110,7 +116,7 @@ export const MovieDetail = ({ movieData }) => {
         <Time>{movieData.runtime} 분</Time>
 
         <Desc>{movieData.overview}</Desc>
-        <Button>예고편 보기</Button>
+        <Button onclick={handleScroll}>예고편 보기</Button>
       </ConWrap>
     </DetailWrap>
   );

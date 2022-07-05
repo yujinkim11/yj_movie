@@ -50,6 +50,7 @@ export const Search = () => {
     handleSubmit,
     getValues,
     setError,
+    clearErrors,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -96,6 +97,9 @@ export const Search = () => {
             <Input
               {...register("search", {
                 required: "내용은 필수입니다!!!",
+                onChange() {
+                  clearErrors("result");
+                },
               })}
               type="text"
               placeholder="영화 검색"
