@@ -49,6 +49,7 @@ export const Search = () => {
     register,
     handleSubmit,
     getValues,
+    setError,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -64,6 +65,17 @@ export const Search = () => {
         data: { results },
       } = await movieApi.search(term);
       setSearchResult(results);
+
+      if (results.length <= 0) {
+        setError("result", {
+          message: "영화가 없어요 !",
+        });
+        // => setError("에러 이름", {message:"값"})
+        // => useForm에 있는 속성으로 에러를 설정할 수 있음
+      } else {
+        setSearchResult(results);
+      }
+
       setLoadig(false);
     } catch (error) {
       console.log(error);
@@ -71,7 +83,7 @@ export const Search = () => {
   };
 
   console.log(searchResult);
-  // console.log(errors);
+  console.log(errors);
   // => 폼 상태에 에러처리 담당
 
   return (
@@ -90,6 +102,7 @@ export const Search = () => {
             ></Input>
 
             {errors?.search?.message}
+            {errors?.result?.message}
           </form>
         </SearchWrap>
 
